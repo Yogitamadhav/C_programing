@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h> // For isalpha, isdigit, islower, isupper, tolower, toupper functions
+#include <ctype.h> 
 
 void main() {
     char ch;
@@ -7,23 +7,23 @@ void main() {
     printf("Enter a character: ");
     scanf("%c", &ch);
 
-    if (isalpha(ch)) { // Check if it's an alphabet
+    if (isalpha(ch)) { 
         printf("The character is an alphabet.\n");
 
-        if (islower(ch)) { // Check if it's lowercase
+        if (islower(ch)) { 
             printf("It's a lowercase letter.\n");
-            ch = toupper(ch); // Convert to uppercase
+            ch = toupper(ch); 
             printf("Converted to uppercase: %c\n", ch);
-        } else { // It must be uppercase
+        } else { 
             printf("It's an uppercase letter.\n");
-            ch = tolower(ch); // Convert to lowercase
+            ch = tolower(ch); 
             printf("Converted to lowercase: %c\n", ch);
         }
 
-    } else if (isdigit(ch)) { // Check if it's a digit
+    } else if (isdigit(ch)) { 
         printf("The character is a digit.\n");
 
-    } else { // Check for other symbols
+    } else { 
         printf("The character is a punctuation symbol or special character.\n");
     }
 }

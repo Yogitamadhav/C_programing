@@ -1,20 +1,17 @@
 #include <stdio.h>
 
-int n, i, a = 1; // Initialize 'a' to 1
-
 int main() {
-    printf("Enter the number: ");
-    scanf("%d", &n);
+    int factorial = 1;
 
-    i = n;
+    printf("Factorial series for the first 10 natural numbers:\n");
 
-    // Calculate the factorial of n using a do-while loop
-    do {
-        a *= i; // Multiply 'a' by 'i'
-        i--;
-    } while (i >= 1);
-
-    printf("Factorial of %d is %d\n", n, a);
+    for (int num = 1; num <= 10; num++) {
+        factorial = 1; 
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;  
+        }
+        printf("Factorial of %d is: %d\n", num, factorial);
+    }
 
     return 0;
 }
